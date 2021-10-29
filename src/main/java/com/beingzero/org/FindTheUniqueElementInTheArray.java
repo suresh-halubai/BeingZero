@@ -35,33 +35,18 @@ public class FindTheUniqueElementInTheArray {
     public static void findUniqueElement(int[] arr) {
 
         HashMap<Integer,Integer> unique = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            if(unique.containsKey(arr[i])){
-                unique.put(arr[i],unique.get(arr[i])+1);
-            }
-            else{
-                unique.put(arr[i],1);
+        for (int k : arr) {
+            if (unique.containsKey(k)) {
+                unique.put(k, unique.get(k) + 1);
+            } else {
+                unique.put(k, 1);
             }
         }
 
-        for (Integer uniqueElement :unique.keySet()
-             ) {
-                if(unique.get(uniqueElement) == 1)
-                    System.out.println(uniqueElement);
+        for (int j : arr) {
+            if (unique.get(j) == 1)
+                System.out.println(j);
         }
 
-        /*for (int i = 0; i < arr.length; i++) {
-            boolean isUnique = true;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    isUnique = false;
-                } else {
-                    isUnique = false;
-                }
-            }
-            if (isUnique) {
-                System.out.println(arr[i]);
-            }
-        }*/
     }
 }
