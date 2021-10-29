@@ -1,4 +1,7 @@
 package com.beingzero.org;
+
+import java.util.Scanner;
+
 /**
  * pseudo code:
  * 1. iterate through all the elements array
@@ -8,7 +11,14 @@ package com.beingzero.org;
  * */
 public class SumOfAllOddElementsInArray {
     public static void main(String[] args) {
-        int[] arr = {6, 9, 8, 4, 3};
+        Scanner input = new Scanner(System.in);
+        int len = input.nextInt();
+
+        int[] arr = new int[len];
+        for(int i =0 ; i <len; i++){
+            arr[i] = input.nextInt();
+        }
+        input.close();
         System.out.println(findSumOfAllOddElements(arr));
     }
 

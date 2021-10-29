@@ -1,4 +1,7 @@
 package com.beingzero.org;
+
+import java.util.Scanner;
+
 /**
  * Pseudo code:
  * 1. pass the array to method reverseArray
@@ -6,7 +9,14 @@ package com.beingzero.org;
   * */
 public class ReverseAnArray {
     public static void main(String[] args) {
-        int[] arr = {2, 19, 8, 15, 4};
+        Scanner input = new Scanner(System.in);
+        int len = input.nextInt();
+
+        int[] arr = new int[len];
+        for(int i =0 ; i <len; i++){
+            arr[i] = input.nextInt();
+        }
+        input.close();
         reverseArray(arr);
     }
 

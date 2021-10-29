@@ -2,10 +2,7 @@ package com.beingzero.org;
 
 import org.omg.CORBA.Object;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 2 approaches discussed below:
@@ -24,7 +21,14 @@ import java.util.Set;
  */
 public class FindTheUniqueElementInTheArray {
     public static void main(String[] args) {
-        int arr[] = {5, 4, 10, 9, 21, 4, 10};
+        Scanner input = new Scanner(System.in);
+        int len = input.nextInt();
+
+        int[] arr = new int[len];
+        for(int i =0 ; i <len; i++){
+            arr[i] = input.nextInt();
+        }
+        input.close();
         findUniqueElement(arr);
     }
 

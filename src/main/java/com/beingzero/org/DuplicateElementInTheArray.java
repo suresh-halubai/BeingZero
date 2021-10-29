@@ -2,6 +2,7 @@ package com.beingzero.org;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /**
 * Pseudo code
@@ -12,7 +13,14 @@ import java.util.HashMap;
 * */
 public class DuplicateElementInTheArray {
     public static void main(String[] args) {
-        int[] arr = {5, 4, 10, 9, 21, 10};
+        Scanner input = new Scanner(System.in);
+        int len = input.nextInt();
+
+        int[] arr = new int[len];
+        for(int i =0 ; i <len; i++){
+            arr[i] = input.nextInt();
+        }
+        input.close();
         findDuplicateElementOfArray(arr);
     }
 
