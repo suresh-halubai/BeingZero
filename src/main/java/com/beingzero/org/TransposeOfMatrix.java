@@ -2,9 +2,8 @@ package com.beingzero.org;
 
 import java.util.Scanner;
 
-public class MatrixRowSum {
+public class TransposeOfMatrix {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the rows");
         int n = input.nextInt();
@@ -15,22 +14,26 @@ public class MatrixRowSum {
 
         System.out.println("enter the elements in the array");
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m ; j++) {
+            for (int j = 0; j < m; j++) {
                 arr[i][j] = input.nextInt();
             }
         }
         input.close();
-        findMatrixRowSum(arr,n,m);
+        findTransposeOfAMatrix(arr,n,m);
     }
 
-    public static void findMatrixRowSum(int[][] arr, int n, int m) {
-
-        for (int i = 0; i < n; i++) {
-            int sum = 0;
-            for (int j = 0; j < m ; j++) {
-                sum = sum+arr[i][j];
+    public static void findTransposeOfAMatrix(int[][] arr,int row, int col) {
+        int[][] temp = new int[col][row];
+        for (int i = 0; i < col ; i++) {
+            for (int j = 0; j < row ; j++) {
+                temp[i][j] = arr[j][i];
             }
-            System.out.println(sum);
+        }
+        for(int i= 0; i<col; i++){
+            for(int j=0; j<row; j++){
+                System.out.print(temp[i][j]+" ");
+            }
+            System.out.println();
         }
     }
 }

@@ -2,9 +2,8 @@ package com.beingzero.org;
 
 import java.util.Scanner;
 
-public class MatrixRowSum {
+public class MatrixColumnSum {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the rows");
         int n = input.nextInt();
@@ -15,22 +14,23 @@ public class MatrixRowSum {
 
         System.out.println("enter the elements in the array");
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m ; j++) {
+            for (int j = 0; j < m; j++) {
                 arr[i][j] = input.nextInt();
             }
         }
         input.close();
-        findMatrixRowSum(arr,n,m);
+        findMatrixColumnSum(arr, n, m);
     }
 
-    public static void findMatrixRowSum(int[][] arr, int n, int m) {
+    public static void findMatrixColumnSum(int[][] arr, int n, int m) {
 
-        for (int i = 0; i < n; i++) {
-            int sum = 0;
-            for (int j = 0; j < m ; j++) {
-                sum = sum+arr[i][j];
+        for (int i = 0 ; i < m ; i++) {
+            int sum =0;
+            for (int j = 0; j < n ; j++) {
+                sum = sum + arr[j][i];
             }
             System.out.println(sum);
         }
+
     }
 }
