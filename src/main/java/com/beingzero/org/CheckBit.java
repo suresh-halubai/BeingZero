@@ -7,11 +7,13 @@ public class CheckBit {
 
         Scanner in = new Scanner(System.in);
         int num = in.nextInt();
-        DecToBinary(num);
+        int k = in.nextInt();
+        in.close();
+        DecToBinary(num,k);
 
     }
 
-    public static void  DecToBinary(int num) {
+    public static void  DecToBinary(int num, int k) {
             int[] binNum = new int[32];
             int i =0;
 
@@ -21,13 +23,9 @@ public class CheckBit {
                 num = num/2;
             }
 
-            /*for (int j = i-1; j >=0 ; j--) {
-
-                System.out.print(binNum[j]);
-            }*/
-
-            if(binNum[i-1] == 1)
+            if(binNum[k] == 1)
                 System.out.println("true");
-
+            else
+                System.out.println("false");
     }
 }
