@@ -7,15 +7,15 @@ public class DigitSum {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        int num = in.nextInt();
+        String num = in.next();
         System.out.println(findDigitSum(num));
     }
 
-    public static int findDigitSum(int num) {
+    public static int findDigitSum(String num) {
         int sum = 0;
-        while(num != 0){
-            sum = sum+ num%10;
-            num = num/10;
+        for (int i = 0; i < num.length() ; i++) {
+            int digit = Integer.parseInt(String.valueOf(num.charAt(i)));
+            sum += digit;
         }
         return sum;
     }
