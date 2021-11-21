@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class ComputeAreaOfRectangle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double length = input.nextDouble();
-        double breadth = input.nextDouble();
+        String length = input.next();
+        String breadth = input.next();
         System.out.print( printRectangleArea(length,breadth));
     }
 
-    public static double printRectangleArea(double length, double breadth) {
-        double area = length*breadth;
+    public static long printRectangleArea(String length, String breadth) {
+        long area = Long.parseLong(String.valueOf(length))* Long.parseLong(String.valueOf(breadth));
         return area;
     }
 }
