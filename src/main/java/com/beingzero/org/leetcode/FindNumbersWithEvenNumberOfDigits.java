@@ -19,7 +19,7 @@ public class FindNumbersWithEvenNumberOfDigits {
     }
 
     public static void main(String[] args) {
-        int nums[] = {12,3,345,24,12};
+        int[] nums = {12,3,345,24,12};
         System.out.println(findNumbers(nums));
     }
 }

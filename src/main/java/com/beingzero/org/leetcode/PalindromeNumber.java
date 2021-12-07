@@ -19,7 +19,7 @@ public class PalindromeNumber {
                     palindrome = palindrome*10 + rem ;
                     num /= 10;
                 }
-                boolean result = (x == palindrome) ? true : false;
+                boolean result = x == palindrome;
                 return result;
             }
 }
