@@ -1,4 +1,4 @@
-package com.beingzero.org;
+package com.beingzero.org.leetcode;
 
 public class FindOccurenceOfConsecutiveOnes {
     public static int findMaxConsecutiveOnes(int[] nums) {

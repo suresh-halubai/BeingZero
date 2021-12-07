@@ -1,4 +1,4 @@
-package com.beingzero.org;
+package com.beingzero.org.leetcode;
 
 public class FindNumbersWithEvenNumberOfDigits {
     public static int findNumbers(int[] nums) {

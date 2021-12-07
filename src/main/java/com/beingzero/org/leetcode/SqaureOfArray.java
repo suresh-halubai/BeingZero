@@ -1,4 +1,4 @@
-package com.beingzero.org;
+package com.beingzero.org.leetcode;
 
 import java.util.Arrays;
 
