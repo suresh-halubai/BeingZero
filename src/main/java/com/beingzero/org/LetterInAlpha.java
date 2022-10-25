@@ -7,8 +7,6 @@ public class LetterInAlpha {
         Scanner in = new Scanner(System.in);
         String str = in.next();
         System.out.println(checkContainsString(str));
-
-
     }
 
     private static String checkContainsString(String str) {
