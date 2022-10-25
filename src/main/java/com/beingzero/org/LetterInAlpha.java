@@ -17,7 +17,7 @@ public class LetterInAlpha {
                 break;
             }
         }
-        String s = containsAllString ? "Yes" : "No";
+        final String s = containsAllString ? "Yes" : "No";
         return s;
     }
 }
