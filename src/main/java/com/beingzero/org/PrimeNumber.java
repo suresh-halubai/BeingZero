@@ -4,20 +4,26 @@ import java.util.Scanner;
 
 public class PrimeNumber {
     public static void main(String[] args) {
+        System.out.println("Enter the number up to which prime numbers are to be found");
         Scanner in = new Scanner(System.in);
         long num = in.nextLong();
-        boolean prime = true;
-        for (long i = 2; i < num ; i++) {
+        int count =0;
+        for (long j = 2; j <=num ; j++) {
+            boolean prime = true;
 
-            if(num % i == 0) {
-                prime = false;
+            for (long i = 2; i <= j / 2; i++) {
+
+                if (j % i == 0) {
+                    prime = false;
+                }
             }
-        }
-        if (prime){
-            System.out.println("Yes");
-        }
-        else{
-            System.out.println("No");
+            if (prime) {
+                count ++;
+                System.out.println(count+": "+j+ ": is a Prime Number");
+
+            } else {
+               // System.out.println(j+ ": is Not a prime");
+            }
         }
     }
 }
